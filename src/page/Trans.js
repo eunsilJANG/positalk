@@ -27,8 +27,7 @@ function Trans() {
   return (
     <div className="app-container">
       <div className="converter-container">
-        <div className="input-section">
-          <div className="input-box-container">
+        <div className="input-section">  
             <div className="input-box">
               <p className="input-label">원문</p>
               <textarea
@@ -41,7 +40,6 @@ function Trans() {
                 변환하기
               </button>
             </div>
-          </div>
         </div>
         <div className="output-section">
           <div className="output-box">
@@ -57,7 +55,7 @@ function Trans() {
             </select>
             <textarea
               readOnly
-              value={outputText}
+              value={outputText} 
               className="output-textarea"
             ></textarea>
             <div className="image-container">

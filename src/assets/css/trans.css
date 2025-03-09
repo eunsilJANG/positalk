@@ -10,12 +10,13 @@
   display: flex;
   flex-direction: row; /* Align input and output sections horizontally */
   gap: 20px;
-  width: 70%; /* Occupies 90% of the available space */
+  width: 80%; /* Occupies 90% of the available space */
   height: 60%; /* Added height for better vertical alignment */
   background-color: #ffffff;
   border: 1px solid #dcdcdc;
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -26,7 +27,7 @@
   flex-direction: column;
   gap: 10px;
   width: 50%;
-  height: 90%; /* Match the height of the converter-container */
+  height: 90%; 
   padding: 30px;
   margin: 10px;
 }
@@ -38,44 +39,79 @@
   gap: 10px;
   width: 100%;
   height: 100%; /* Stretch to fill the section height */
+  justify-content: flex-start;  
+  align-items: flex-start;  /* 수평 가운데 정렬 */
   background-color: #f9f9f9;
   border: 1px solid #dcdcdc;
   border-radius: 10px;
   padding: 10px;
+  
 }
 
-.input-textarea,
-.output-textarea {
-  width: 100%;
-  height: 100%;
-
-  border: 1px solid #dcdcdc;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
-  resize: none;
+.input-label {
+  display: block;
+  width: 90%;  /* 부모 너비 90% */
+  text-align: left;  /* 텍스트 왼쪽 정렬 */
+  font-weight: 900;
+  font-size: 20px;
+  margin-left: 60px;
 }
 
-.convert-button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
+/* 
+display: block;: 요소가 블록 레벨로 표시되어 새로운 줄에서 시작하며, 너비가 100%입니다.
+display: inline;: 요소가 인라인 요소로 표시되어 새로운 줄을 만들지 않으며, 너비가 내용에 맞게 결정됩니다.
+display: flex;: 요소가 플렉스 컨테이너로 동작하여 자식 요소들을 플렉스 아이템으로 취급합니다.
+  - 플렉스 컨테이너는 자식 요소들의 배치 방식(수평, 수직)을 유연하게 조정할 수 있게 해줍니다.
+  - 기본적으로 자식 요소들을 수평(가로)로 나열하고, `flex-direction`을 통해 수직 정렬도 가능합니다.
+  - 자식 요소들의 크기와 배치 방식은 `flex` 속성으로 자유롭게 설정할 수 있습니다.
+*/
+
 
 .style-select {
   padding: 10px;
   border: 1px solid #dcdcdc;
   border-radius: 5px;
   font-size: 16px;
+  align-self: flex-start; /* 왼쪽 정렬 */
+  margin-left: 60px;
+  margin-top: 40px; 
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-textarea,
+.output-textarea {
+  width: 90%;
+  height: 80%;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  align-self: center;
+
 }
 
 .output-textarea {
-  background-color: #ffffff;
+  margin-top: 20x;
 }
+
+.convert-button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  width: 150px; /* 원하는 크기 설정 */
+  height: auto; /* 비율에 맞게 자동 조정 */
+  align-self: flex-end;
+  margin-right: 60px;
+}
+
+
+
 
 .output-buttons {
   display: flex;
@@ -107,12 +143,14 @@
 .image-container {
   display: flex;
   gap: 10px; /* 이미지 사이에 간격 추가 */
-  justify-content: flex-start; /* 왼쪽 정렬 */
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-right: 60px;
 }
 
 .sound-image,
 .copy-image {
-  width: 50px; /* 원하는 크기 설정 */
+  width: 300px; /* 원하는 크기 설정 */
   height: auto; /* 비율에 맞게 자동 조정 */
   cursor: pointer; /* 클릭 시 커서 변경 */
 }
