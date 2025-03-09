@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 빌드 아티팩트
+/dist
+/build
+/target
+/coverage
+
+# IDE 파일들
+.vscode/
+/.idea/
+/*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# 환경 설정 파일
+.env
+
+# 로그 파일
+*.log
+
+# 임시 파일
+*.swp
+*.swo
+
+# 패키지 매니저
+package-lock.json
+yarn.lock
+
+# 테스트 아티팩트
+/test-coverage/
+
+# 빌드 출력물
+*.out
+*.o
+*.a
+*.so
+
+# 백업 파일
+*~
